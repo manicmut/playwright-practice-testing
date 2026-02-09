@@ -5,4 +5,4 @@ playwright/.cache/
 screenshots/*.png
 *.log
 .env
-package-lock.json
+
