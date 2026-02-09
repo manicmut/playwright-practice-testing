@@ -1,0 +1,82 @@
+{
+  "validUsers": [
+    {
+      "name": "Admin User - John Doe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "admin",
+      "email": "admin@practicesoftwaretesting.com",
+      "password": "welcome01",
+      "expectedUrl": "admin",
+      "description": "Administrator account with full access"
+    },
+    {
+      "name": "Customer User - Jane Doe",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "role": "user",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "welcome01",
+      "expectedUrl": "account",
+      "description": "Regular customer account"
+    },
+    {
+      "name": "Customer User - Jack Howe",
+      "firstName": "Jack",
+      "lastName": "Howe",
+      "role": "user",
+      "email": "customer2@practicesoftwaretesting.com",
+      "password": "welcome01",
+      "expectedUrl": "account",
+      "description": "Second customer account"
+    },
+    {
+      "name": "Customer User - Bob Smith",
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "role": "user",
+      "email": "customer3@practicesoftwaretesting.com",
+      "password": "pass123",
+      "expectedUrl": "account",
+      "description": "Third customer account with different password"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "name": "Wrong Email",
+      "email": "wrongemail@test.com",
+      "password": "welcome01",
+      "expectedError": "Invalid email or password"
+    },
+    {
+      "name": "Wrong Password",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "wrongpassword123",
+      "expectedError": "Invalid email or password"
+    },
+    {
+      "name": "Empty Email",
+      "email": "",
+      "password": "welcome01",
+      "expectedError": "Email is required"
+    },
+    {
+      "name": "Empty Password",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "",
+      "expectedError": "Password is required"
+    },
+    {
+      "name": "Both Empty",
+      "email": "",
+      "password": "",
+      "expectedError": "Email is required"
+    },
+    {
+      "name": "SQL Injection Attempt",
+      "email": "admin' OR '1'='1",
+      "password": "anything",
+      "expectedError": "Invalid email or password"
+    }
+  ]
+}
