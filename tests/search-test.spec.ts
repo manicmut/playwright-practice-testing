@@ -11,6 +11,5 @@ test.describe('Product Search Tests', () => {
     const count = await homePage.getProductCount();
     expect(count).toBeGreaterThan(0);
     console.log(`✅ Found ${count} products`);
-  });
-  
+  });  
 });
